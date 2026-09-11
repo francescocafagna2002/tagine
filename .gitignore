@@ -1,0 +1,28 @@
+# ── Customer data. Never commit. ────────────────────────────────────────────
+# The AEW and CKW extracts are personally attributable: a multi-year 15-minute
+# load curve reveals occupancy, working hours, holidays and absence, and the
+# challenge is explicitly about analysing it *while preserving privacy*.
+Data/
+*.parquet
+*.csv
+
+# Derived per-customer results. scores.parquet and friends are keyed by real
+# MP IDs with a score per meter — still customer data, just one step removed.
+results/
+results_*/
+stage1_out/
+*.log
+
+# Local environment
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+.DS_Store
+~$*
+.streamlit/secrets.toml
+presentation.html
+
+# PowerPoint source for the decks. The PDFs are the deliverable; the .pptx are
+# working files and bloat the repo with binary churn on every edit.
+*.pptx
